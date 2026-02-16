@@ -1,5 +1,6 @@
+package br.com.dennysfernandes.relogio;
 public class Despertador {
-  int horas;
+  int hora;
   int minutos;
   int soneca;
 

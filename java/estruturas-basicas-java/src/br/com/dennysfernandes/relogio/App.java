@@ -1,3 +1,6 @@
+package br.com.dennysfernandes.relogio;
+import java.util.Timer;
+
 public class App {
     public static void main(String[] args)  {
         /*
@@ -10,5 +13,8 @@ public class App {
         */
        String saudacao = "Olá, Dennys";
        System.out.print(saudacao);
+
+       Despertador despertador;
+       Timer timer;
     }
 }
