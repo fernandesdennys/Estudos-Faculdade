@@ -52,7 +52,7 @@ public class App {
        /**
         * Tipos promitivos:
         * Valores padão:
-        * int = 0, fload = 0.0, doublers 0.0, boleas = false
+        * int = 0, float = 0.0, double 0.0, boleas = false
         * 
         * Tipos de referência:
         * <TipoDaClasse> identificador = new TipoDaClasse();
