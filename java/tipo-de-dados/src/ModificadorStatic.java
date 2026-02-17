@@ -5,7 +5,7 @@ public class ModificadorStatic {
     // 2. Constants 
 
 
-  /*   Conta contaJoao = new Conta();
+  /*Conta contaJoao = new Conta();
     Conta contaMaria = new Conta(); */
 
     Conta.depositarContaConjunta(100.0);
