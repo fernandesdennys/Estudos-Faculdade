@@ -1,0 +1,7 @@
+package unidade2.parte2;
+   public HelloWorld() {
+   }
+   public static void main(String[] var0) {
+      System.out.println("Hello World");
+   }
+
