@@ -1,4 +1,4 @@
-package unidade2.programa4;
+package programa4;
 
 class Escopo {
   int idadeGlobal = 30; // escopo GLOBAL

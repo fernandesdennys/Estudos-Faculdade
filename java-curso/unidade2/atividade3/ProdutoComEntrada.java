@@ -1,4 +1,4 @@
-package unidade2.atividade3;
+package atividade3;
 import java.util.Scanner;
 
 public class ProdutoComEntrada {

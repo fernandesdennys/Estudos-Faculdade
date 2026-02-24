@@ -1,4 +1,4 @@
-package unidade2.atividade2;
+package atividade2;
 import java.util.Scanner;
 public class SomaPersonalizada {
   

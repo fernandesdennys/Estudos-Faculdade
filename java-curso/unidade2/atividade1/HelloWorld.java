@@ -1,4 +1,4 @@
-package unidade2.atividade1;
+package atividade1;
 
 public class HelloWorld {
    public static void main(String[] var0) {

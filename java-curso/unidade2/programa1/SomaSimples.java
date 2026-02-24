@@ -1,4 +1,4 @@
-package unidade2.programa1;
+package programa1;
 public class SomaSimples {
   public static void main(String[] args) {
     int a = 10;

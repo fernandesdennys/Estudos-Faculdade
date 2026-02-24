@@ -1,4 +1,4 @@
-package unidade2.programa2;
+package programa2;
 import java.util.Scanner;
   public class SomaComEntrada {
     public static void main (String[] args) {

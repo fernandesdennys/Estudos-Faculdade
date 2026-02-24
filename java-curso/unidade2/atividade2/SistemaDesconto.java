@@ -1,4 +1,4 @@
-package unidade2.atividade2;
+package atividade2;
 public class SistemaDesconto {
 
     public static double calcularValorFinal(boolean premium, double valorCompra) {

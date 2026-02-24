@@ -1,4 +1,4 @@
-package unidade2.programa3;
+package programa3;
 import java.util.Scanner;
 
 public class SomaDecimal {

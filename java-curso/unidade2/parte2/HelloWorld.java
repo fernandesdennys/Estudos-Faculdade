@@ -1,4 +1,4 @@
-package unidade2.parte2;
+package parte2;
 
 public class HelloWorld {
 
