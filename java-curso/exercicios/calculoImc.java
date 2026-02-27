@@ -20,7 +20,7 @@ public class calculoImc {
     System.out.println("NOME: " + nome.toUpperCase());
     System.out.println("PESO: " + peso);
     System.out.println("ALTURA: " + altura);
-    System.out.printf("SEU IMC É: %.2f%n" + imc);
+    System.out.printf("SEU IMC É: %.2f%n", imc);
 
     System.out.println("CLASSIFICAÇÃO: ");
 
