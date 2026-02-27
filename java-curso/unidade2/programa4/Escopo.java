@@ -5,5 +5,6 @@ class Escopo {
 
   public static void main(String[] args) {
       int idadeLocal = 20;
+      System.out.printf("Idade local é de: " +idadeLocal);
   }
 }

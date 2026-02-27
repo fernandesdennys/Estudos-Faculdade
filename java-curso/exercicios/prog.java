@@ -17,8 +17,8 @@ public class prog {
 
     texto = texto.replace("JAVA", palavra);
     System.out.println("O texto está contendo: "+texto);
-
-
+    
+    leitor.close();
 
   }
 }
