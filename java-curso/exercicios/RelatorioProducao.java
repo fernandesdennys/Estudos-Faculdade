@@ -3,21 +3,6 @@ package exercicios;
 import java.util.Locale;
 import java.util.Scanner;
 
-/* 
-
-CONTROLE DE ENTREGAS
-
-O programa deve:
-Pedir número total de entregas
-Pedir número de entregas atrasadas
-Pedir tempo médio estimado
-Pedir tempo real total
-Calcular:
-Percentual de atraso
-Diferença entre tempo estimado e real
-Mostrar relatório
-
-*/
 public class RelatorioProducao {
   public static void main(String[] args) {
     Scanner entrada = new Scanner(System.in);
