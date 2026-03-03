@@ -14,6 +14,8 @@ public class Prog {
     
     // texto = String.format("%.2f", saldo);
     System.out.printf("Saldo: R$ %.2f" ,saldo);
+    
+    leitor.close();
 
   }
 }
