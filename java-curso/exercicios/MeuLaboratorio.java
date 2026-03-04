@@ -10,6 +10,7 @@ public class MeuLaboratorio {
 
     System.out.println("=== RELATÓRIO DIÁRIO DO LABORATÓRIO ===");
 
+    //IN (input)
     System.out.println("Informe a quantidade de amostras necessárias:");
     int amostras = entrada.nextInt();
 
@@ -19,11 +20,11 @@ public class MeuLaboratorio {
     System.out.println("Informe os resultados válidos:");
     int validos = entrada.nextInt();
 
-    // PROCESSAMENTO
+    // PROCESS (Processamento)
     double tempoMedio = tempoTotal / amostras;
     double percentualValidos = (validos / (double) amostras) * 100;
     
-    //SAÍDA
+    //OUT (output)
     System.err.println("\n=== RESULTADO ===");
     System.out.println("Tempo médio por amostras (min):"
         +String.format("%.2f", tempoMedio));
