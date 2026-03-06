@@ -14,7 +14,7 @@ public class sistemaDesconto {
     if (valorCompra >= 500 ) {
       double descontoMax = valorCompra * 0.20;
       System.out.printf("Desconto aplicado: 20%%. Sua compra ultrapassou R$ 500,00 e recebeu o benefício máximo de desconto no valor de: %.2f%n", descontoMax);
-    } else if (valorCompra <= 499.99 && valorCompra > 200.00) {
+    } else if (valorCompra >= 200.00) {
       double descontoMed = valorCompra * 0.10;
       System.out.printf("Desconto aplicado: 10%%. Sua compra se enquadra na faixa de desconto intermediária de: %.2f%n", descontoMed);
     } else {
