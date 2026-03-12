@@ -43,6 +43,6 @@ public class somaMediaMaiorMenor {
         System.out.println("Maior: " + String.format("%.2f", maior)); // Mostra o maior valor digitado
         System.out.println("Menor: " + String.format("%.2f", menor)); // Mostra o menor valor digitado
 
-        entrada.close(); // Fecha o Scanner para liberar recursos do sistema
+        entrada.close();
     }
 }
