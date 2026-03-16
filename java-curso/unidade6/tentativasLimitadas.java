@@ -6,6 +6,11 @@ public class tentativasLimitadas {
   public static void main(String[] args) {
     Scanner entrada = new Scanner(System.in);
 
+    /* 
+    Em sistemas reais, muitas vezes você não quer repetir “para sempre”. Você quer limitar tentativas por segurança e experiência do usuário.
+      Exemplo: pedir uma senha com no máximo 3 tentativas. 
+    */
+    
     final int maxTentativas = 3;
 int tentativas = 0;
 boolean autenticado = false;
