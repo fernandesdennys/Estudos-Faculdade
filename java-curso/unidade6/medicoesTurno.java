@@ -1,3 +1,4 @@
+package unidade6;
 import java.util.Scanner;
 
 public class medicoesTurno {
