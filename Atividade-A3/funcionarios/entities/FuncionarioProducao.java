@@ -4,14 +4,16 @@ import funcionarios.pagamento.FolhaDePagamento;
 
 public class FuncionarioProducao extends FolhaDePagamento {
 private int qtdePecas;
-private double valordaPeca;
+private double valorDaPeca;
 
   public FuncionarioProducao() {
   
 }
 
-  public FuncionarioProducao(long id, String nome, String matricula, double salarioFixo) {
-    super(id, nome, matricula, salarioFixo);
+  public FuncionarioProducao(String nome, String matricula, int qtdePecas, double valorDaPeca) {
+    super(nome, matricula);
+    this.qtdePecas = qtdePecas;
+    this.valorDaPeca = valorDaPeca;
   }
 
   public int getQtdePecas() {
@@ -22,26 +24,29 @@ private double valordaPeca;
     this.qtdePecas = qtdePecas;
   }
 
-  public double getValordaPeca() {
-    return valordaPeca;
+  public double getValorDaPeca() {
+    return valorDaPeca;
   }
 
-  public void setValordaPeca(double valordaPeca) {
-    this.valordaPeca = valordaPeca;
+  public void setValorDaPeca(double valorDaPeca) {
+    this.valorDaPeca = valorDaPeca;
   }
 
   @Override
   public double calcularSalarioFinal() {
-    return 0;
+    double valorDoBonus = valorDaPeca * qtdePecas;
+    return getsalarioBase() + valorDoBonus;
   }
 
   @Override
   public String toString() {
-    return "Fucionario de Produção:" +
-    "\nQuantidade de peças: " + qtdePecas +
-    "\nValor da peça: " + valordaPeca;
-    
+    return "Fucionario Produção:" +
+    "\n ID: " + getId() +
+    "\nNome: " + getNome() +
+    "\nMatricula: " + getMatricula() +
+    "\nQuantidade de peças: " +  qtdePecas +
+    "\nValor da Peça: " + valorDaPeca +
+    "\nSalarioFinal: " + calcularSalarioFinal();
   }
 
-  
 }

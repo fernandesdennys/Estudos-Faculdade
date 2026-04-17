@@ -3,48 +3,51 @@ package funcionarios.entities;
 import funcionarios.pagamento.FolhaDePagamento;
 
 public class FucionarioComissionado extends FolhaDePagamento{
-  private int valorDeVendas;
-  private int percentualDeComissao;
+  private double valorDeVendas;
+  private double percentualDeComissao;
 
   public FucionarioComissionado() {
   }
 
-  public FucionarioComissionado(long id, String nome, String matricula, double salarioFixo, int valorDeVendas,
-      int percentualDeComissao) {
-    super(id, nome, matricula, salarioFixo);
+  public FucionarioComissionado(String nome, String matricula, double valorDeVendas,
+      double percentualDeComissao) {
+    super(nome, matricula);
     this.valorDeVendas = valorDeVendas;
     this.percentualDeComissao = percentualDeComissao;
   }
 
   
 
-  public int getValorDeVendas() {
+  public double getValorDeVendas() {
     return valorDeVendas;
   }
 
-  public void setValorDeVendas(int valorDeVendas) {
+  public void setValorDeVendas(double valorDeVendas) {
     this.valorDeVendas = valorDeVendas;
   }
 
-  public int getPercentualDeComissao() {
+  public double getPercentualDeComissao() {
     return percentualDeComissao;
   }
 
-  public void setPercentualDeComissao(int percentualDeComissao) {
+  public void setPercentualDeComissao(double percentualDeComissao) {
     this.percentualDeComissao = percentualDeComissao;
   }
 
   @Override
   public double calcularSalarioFinal() {
-    return 0.0;
+    return getsalarioBase() + (valorDeVendas + percentualDeComissao / 100) ;
   }
   
 @Override
   public String toString() {
     return "Fucionario Comissionado:" +
+    "\n ID: " + getId() +
+    "\nNome: " + getNome() +
+    "\nMatricula: " + getMatricula() +
     "\nValor de vendas: " +  valorDeVendas +
-    "\nPercentual de comissão: " + percentualDeComissao;
-    
+    "\nPercentual de comissão: " + percentualDeComissao +
+    "\nSalarioFinal: " + calcularSalarioFinal();
   }
 
 

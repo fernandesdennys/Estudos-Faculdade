@@ -11,52 +11,93 @@ import funcionarios.pagamento.FolhaDePagamento;
 public class pagamento {
   public static void main(String[] args) {
 
-    final double SALARIO_BASE = 2000.0; //Declaração da constant
-
     List<FolhaDePagamento> folha = new ArrayList<>();
     Locale.setDefault(Locale.US);
     Scanner sc = new Scanner(System.in);
 
-    FuncionarioPadrao fPadrao = new FuncionarioPadrao();
-    FucionarioComissionado fComissionado = new FucionarioComissionado();
-    FuncionarioProducao fProducao = new FuncionarioProducao();
+    int opcao;
 
-    System.out.println("Digite o nome do Funcionário ");
-    fPadrao.setNome("Guilherme");
-    fPadrao.setMatricula("0129");
-    fPadrao.setSalarioFixo(SALARIO_BASE);
+    do {
+      System.out.println("===== MENU =====");
+      System.out.println("Tipo de Funcionário");
+      System.out.println("1 - Funcionário Padrão");
+      System.out.println("2 - Funcionário Comissionado");
+      System.out.println("3 - Funcionário de Produção");
+      System.out.println("4 - Folha de Pagamento");
+      System.out.println("0 - Sair\n");
+      System.out.print("Digite uma das opções acima: ");
 
-    System.out.println();
+      opcao = sc.nextInt();
+      sc.nextLine();
 
-    fComissionado.setNome("João");
-    fComissionado.setMatricula("0214");
-    fComissionado.setSalarioFixo(SALARIO_BASE);
-    fComissionado.setPercentualDeComissao(5);
-    fComissionado.setValorDeVendas(1000);
+      switch (opcao) {
+        case 1:
+          System.out.println("Digite o nome do funcionário: ");
+          String nomePadrao = sc.nextLine();
 
-    System.out.println();
+          System.out.println("Digite a matrícula do funcionário ");
+          String matriculaPadrao = sc.nextLine();
 
-    fProducao.setNome("José");
-    fProducao.setMatricula("0324");
-    fProducao.setSalarioFixo(SALARIO_BASE);
-    fProducao.setQtdePecas(7);
-    fProducao.setValordaPeca(50.0);
+          FuncionarioPadrao fPadrao = new FuncionarioPadrao( nomePadrao, matriculaPadrao );
+          folha.add(fPadrao);
+          System.out.println("=== Funcionario Padrao cadastrado com sucesso ===\n");
+          break;
+          
+        case 2:
+          System.out.println("Digite o nome do funcionário: ");
+          String nomeComissionado = sc.nextLine();
 
-    System.out.println();
+          System.out.println("Digite a matrícula do funcionário ");
+          String matriculaComissionado = sc.nextLine();
+          
+          System.out.println("Digite o valor da venda: ");
+          double valorDeVendas = sc.nextDouble();
 
-    folha.add(fPadrao);
-    folha.add(fComissionado);
-    folha.add(fProducao);
+          System.out.println("Digte a % da comissão: ");
+          double percentualDeComissao = sc.nextDouble();
+          sc.nextLine();
+          FucionarioComissionado fComissionado = new FucionarioComissionado(nomeComissionado, matriculaComissionado, valorDeVendas, percentualDeComissao);
+          folha.add(fComissionado);
+          System.out.println("=== Funcionario Comissionado cadastrado com sucesso ===\n");
+          break;
 
-    System.out.println("Total de Pessoas Cadastradas: " + folha.size());
+        case 3:
+        System.out.println("Digite o nome do funcionário: ");
+          String nomeProducao = sc.nextLine();
 
-    for (FolhaDePagamento f : folha) {
-      System.out.println("ID: " + f.getId());
-      System.out.println("Nome: " + f.getNome());
-      System.out.println("Matricula: " + f.getMatricula());
-      System.out.println("Salário Fixo: " + f.getSalarioFixo());
-      System.out.println("Salário Final: " + f.calcularSalarioFinal());
-    }
+          System.out.println("Digite a matrícula do funcionário ");
+          String matriculaPorducao = sc.nextLine();
+          
+          System.out.println("Digite a quantidade produzida: ");
+          int qtdePecas = sc.nextInt();
+
+          System.out.println("Digte o valor da peça: ");
+          double valorDaPeca = sc.nextDouble();
+          sc.nextLine();
+          FuncionarioProducao fProducao = new FuncionarioProducao(nomeProducao, matriculaPorducao, qtdePecas, valorDaPeca);
+          folha.add(fProducao);
+          System.out.println("=== Funcionario Produção cadastrado com sucesso ===\n");
+          break;
+      
+          case 4:
+          System.out.println("Folha de pagamento: ");
+          System.out.println("Total de Pessoas Cadastradas: " + folha.size());
+          System.out.println("---------------------");
+          for(FolhaDePagamento f : folha) {
+            System.out.println(f.toString());
+            System.out.println("---------------------");
+          }
+            break;
+            case 0:
+              System.out.println("Consulta finalizada.");
+              break;
+        default:
+            System.out.println("OPÇÃO INVÁLIDA!!!");
+            System.out.println("Digite uma opção VÁLIDA");
+          break;
+      }
+
+    } while (opcao != 0);
 
     sc.close();
   }

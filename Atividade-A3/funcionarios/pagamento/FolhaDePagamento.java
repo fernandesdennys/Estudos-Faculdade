@@ -5,17 +5,16 @@ public abstract class FolhaDePagamento {
   private long id;
   private String nome;
   private String matricula;
-  private double salarioFixo;
+  protected static final double salarioBase = 2000.0;
   
   public FolhaDePagamento() {
     this.id = contador++;
   }
 
-  public FolhaDePagamento(long id, String nome, String matricula, double salarioFixo) {
-    this.id = id;
+  public FolhaDePagamento(String nome, String matricula) {
+    this.id = contador++;
     this.nome = nome;
     this.matricula = matricula;
-    this.salarioFixo = salarioFixo;
   }
 
   public static long getContador() {
@@ -46,12 +45,8 @@ public abstract class FolhaDePagamento {
     this.matricula = matricula;
   }
 
-  public double getSalarioFixo() {
-    return salarioFixo;
-  }
-
-  public void setSalarioFixo(double salarioFixo) {
-    this.salarioFixo = salarioFixo;
+  public double getsalarioBase() {
+    return salarioBase;
   }
 
   public abstract double calcularSalarioFinal();
@@ -62,7 +57,7 @@ public abstract class FolhaDePagamento {
     return "ID: " + id + 
     "\nNome: " +  nome +
     "\nMatricula: " + matricula +
-    "\nSalarioFixo: " + salarioFixo +
+    "\nSalarioFixo: " + salarioBase +
     "\nSalarioFinal: " + calcularSalarioFinal();
   }
 }
